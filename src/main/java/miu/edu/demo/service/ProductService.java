@@ -1,12 +1,13 @@
 package miu.edu.demo.service;
 
 import miu.edu.demo.domain.Product;
+import miu.edu.demo.domain.dto.ProductDto;
 
 import java.util.List;
 
 public interface ProductService {
 
-    List<Product> findAll();
+    List<ProductDto> findAll();
 
-    Product findById(int id);
+    ProductDto findById(int id);
 }

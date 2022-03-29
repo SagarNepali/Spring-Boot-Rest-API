@@ -1,6 +1,7 @@
 package miu.edu.demo.controller;
 
 import miu.edu.demo.domain.Product;
+import miu.edu.demo.domain.dto.ProductDto;
 import miu.edu.demo.service.ProductService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.GetMapping;
@@ -23,13 +24,15 @@ public class ProductController {
     }
 
     @GetMapping
-    public List<Product> getAll(){
+    public List<ProductDto> getAll(){
         return productService.findAll();
     }
 
     @GetMapping("/{id}")
-    public Product getById(@PathVariable int id){
+    public ProductDto getById(@PathVariable int id){
         return productService.findById(id);
     }
+
+
 
 }
